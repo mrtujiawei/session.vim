@@ -3,7 +3,7 @@
 " Maintainer:  tujiawei <jiaweitu@marchthepolo.com>
 " Last Change: 2023-09-06
 
-if !exists('g:session_load') || g:session_load == 1
+if exists('g:session_load') && g:session_load == 1
   finish
 endif
 
