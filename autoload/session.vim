@@ -27,12 +27,6 @@ endif
 
 " 保存 session
 func! session#save(filename)
-  " 判断一下目录是否打开
-  " 关闭目录，加载 session 会报错
-  if exists(':NERDTreeClose')
-    :NERDTreeClose
-  endif
-
   exec "mksession! " . s:session_dir . a:filename
 endfunc
 

@@ -14,6 +14,11 @@ if !exists('g:session_auto_map') || g:session_auto_map != 0
 
 endif
 
+if exists('g:session_auto_save') == 1
+  autocmd! VimEnter * call session#load(join(split(getcwd(), '/'), '-'))
+  autocmd! VimLeave * call session#save(join(split(getcwd(), '/'), '-'))
+endif
+
 " 命令
 if !exists('g:session_auto_command') || g:session_auto_command != 0
   " 保存会话

@@ -3,6 +3,9 @@
 会话管理
 
 ```vimscript
+" 自动保存session
+let g:session_auto_save = 1
+
 " 禁止加载插件
 let g:session_load = 1
 
